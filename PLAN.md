@@ -97,15 +97,15 @@ Rút 2 project "copy job" khỏi Projects → thêm Service Marketplace, Vietnam
 
 ---
 
-## 5. Câu hỏi cần Hien quyết
+## 5. Quyết định (Hien chốt 2026-06-25)
 
-1. **Card #3/#4** (SCC/Grab, private): giữ trên portfolio với nhãn "private/N/A", hay bỏ hẳn?
-2. **Ngôn ngữ chính:** EN (HR quốc tế) hay VI? Draft có toggle cả 2.
-3. **Repo research nào được phép public** (không lộ data lab nhạy cảm)?
-4. **DOI/paper link:** có sẵn hay "TBU"?
-5. **Deploy:** GitHub Pages (`FrorsttzNguyen.github.io`, free) hay Vercel?
-6. **Palette:** blaugrana hay terminal làm mặc định? (đã có button switch, không còn light mode)
-7. **Agentic public project:** có làm không, và chọn ý nào (#1 PR reviewer / #2 research assistant / #3 RAG Việt)?
+1. **Card #3/#4 (SCC/Grab):** GIỮ — "Production — code private".
+2. **Ngôn ngữ chính:** EN (toggle VI vẫn còn).
+3. **Repo research public:** cái nào có paper — Hien gửi sau.
+4. **DOI:** để trong CV, không hiện trên portfolio (research meta ghi "DOI on CV").
+5. **Deploy:** GitHub Pages — **đã live: https://frorsttznguyen.github.io/** (repo `FrorsttzNguyen/FrorsttzNguyen.github.io`, public).
+6. **Palette:** cả 2, có button change màu (blaugrana ↔ terminal), không light mode.
+7. **Agentic public project:** CÓ — đã thêm card "Agentic PR Reviewer" (mock data, badge "Planned", note "Not started"). Build thật từ từ.
 
 ---
 
