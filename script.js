@@ -128,12 +128,12 @@ const PROJECTS = [
     repo: "https://github.com/FrorsttzNguyen/milk-tea-manager", demo: null,
   },
   {
-    kind: "dev", mono: "PR", planned: true,
-    title: "Agentic PR Reviewer",
-    tag: "Planned · LangGraph",
-    desc: "GitHub webhook → multi-agent pipeline: a triage agent classifies the PR, a reviewer agent flags risks via tool-calling, a summarizer posts a comment. A small PUBLIC project to make my Agentic skill viewable — the SCC version is private. Status: planned, mock data only, not started.",
-    stack: ["LangGraph", "FastAPI", "GitHub Webhooks", "Tool-calling"],
-    repo: null, demo: null, foot: "Not started — mock data, planning in progress",
+    kind: "dev", mono: "AD", planned: true, badge: "In progress",
+    title: "AgentDesk",
+    tag: "In progress · LangGraph",
+    desc: "AI-side capstone — a chatbot control plane that drives agentic automation. Fullstack (React + FastAPI) + automation (real tool execution, not just chat) + agentic (LangGraph multi-agent: Planner → Executor → Guard with HITL) + chatbot-controlled. A public project that re-demonstrates the agentic skills from private work, with public data. Phase 0 runnable slice done: live GitHub PR tool + chat plumbing.",
+    stack: ["LangGraph", "Multi-agent", "FastAPI", "React", "GitHub API", "Tool-calling"],
+    repo: null, demo: null, foot: "In progress — phase 0 runnable slice (live GitHub tool + chat plumbing)",
   },
   {
     kind: "dev", mono: "BAR",
@@ -214,7 +214,7 @@ function renderProjects(filter = "all") {
     const cover = el("div", "project__cover");
     cover.appendChild(el("span", "project__mono", p.mono));
     if (p.star) cover.appendChild(el("span", "project__star", "★ Flagship"));
-    if (p.planned) cover.appendChild(el("span", "project__planned", "Planned"));
+    if (p.planned) cover.appendChild(el("span", "project__planned", p.badge || "Planned"));
     card.appendChild(cover);
 
     const body = el("div", "project__body");
