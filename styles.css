@@ -89,13 +89,19 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex; align-items: center; gap: 6px; transition: all .2s;
 }
 .icon-btn:hover { color: var(--text); border-color: var(--dev); }
-.icon-btn--palette { min-width: 108px; justify-content: flex-start; }
-.swatch {
-  width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0;
-  background: linear-gradient(135deg, var(--dev) 0%, var(--dev) 50%, var(--research) 50%, var(--research) 100%);
-  border: 1px solid rgba(255,255,255,.12);
+
+/* palette swatch button — square only, no label */
+.swatch-btn {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px; cursor: pointer; display: inline-flex;
+  align-items: center; justify-content: center; transition: border-color .2s, transform .15s;
 }
-#themeLabel { font-size: 12px; }
+.swatch-btn:hover { border-color: var(--dev); transform: translateY(-1px); }
+.swatch {
+  width: 16px; height: 16px; border-radius: 4px;
+  background: linear-gradient(135deg, var(--dev) 0%, var(--dev) 50%, var(--research) 50%, var(--research) 100%);
+  border: 1px solid rgba(255,255,255,.15);
+}
 
 .btn {
   display: inline-flex; align-items: center; gap: 8px;

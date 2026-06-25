@@ -1,66 +1,7 @@
 /* ============================================================
- *  NPH Portfolio — data-driven, bilingual EN/VI, vanilla JS
+ *  NPH Portfolio — data-driven, EN only, vanilla JS
  *  Edit content here. No build step. No images (CSS covers).
  * ============================================================ */
-
-const I18N = {
-  en: {
-    "brand": "Hien Nguyen",
-    "nav.about": "About", "nav.research": "Research", "nav.projects": "Projects",
-    "nav.learning": "Learning", "nav.skills": "Skills", "nav.contact": "Contact",
-    "hero.eyebrow": "Ho Chi Minh City, Vietnam",
-    "hero.status": "$ currently learning — Spring Boot & System Design",
-    "hero.tagline": "AI/ML Engineer × Backend Engineer — bridging research and production.",
-    "hero.sub": "Published research on Transformers for Vietnamese Sign Language Translation. Production Agentic AI at SCC Vietnam. Now engineering a Java/Spring Boot multi-vendor platform — a deliberate, differentiating Backend + AI hybrid profile.",
-    "hero.ctaProjects": "See projects", "hero.ctaResearch": "Read research",
-    "hero.splitResearch": "Papers · SLT · Transformers",
-    "hero.splitDev": "Spring · RAG · Agentic AI",
-    "about.title": "About",
-    "about.researcherTitle": "Researcher side",
-    "about.researcherBody": "B.Eng. Computer Engineering at VNU HCM (GPA 3.2). Thesis and publication on Transformers for Vietnamese Sign Language Translation — retraining SLRT, ALLSVD, ASLLVD and semantic-segmentation conditioning. I care about rigor: ablations, reproducibility, honest evaluation.",
-    "about.engineerTitle": "Engineer side",
-    "about.engineerBody": "Shipped production Agentic AI + RAG at SCC Vietnam (FastAPI, LangGraph, Azure AI Search) and fullstack chatbot features at Grab. Now adding deep backend depth — Java, Spring Boot, Postgres, Redis, Stripe — learned through a real multi-vendor platform, not toy tutorials.",
-    "research.title": "Research & Publications",
-    "projects.title": "Selected Projects",
-    "projects.sub": "Production engineering and research, balanced. Covers are CSS-generated — real screenshots slot in later.",
-    "projects.filterAll": "All", "projects.filterDev": "Engineering", "projects.filterResearch": "Research",
-    "learning.title": "Currently Learning",
-    "learning.sub": "Engineer Pro track — self-study, mapped 1:1 to a real Spring Boot project. Honest about being early in Java.",
-    "skills.title": "Skills",
-    "contact.title": "Contact",
-    "contact.lead": "Open to AI/ML and backend engineering roles. Research collaborations welcome.",
-    "footer.built": "Built by hand — HTML, CSS, vanilla JS. No framework.",
-    "footer.status": "exit 0",
-  },
-  vi: {
-    "brand": "Hiền Nguyễn",
-    "nav.about": "Giới thiệu", "nav.research": "Nghiên cứu", "nav.projects": "Dự án",
-    "nav.learning": "Đang học", "nav.skills": "Kỹ năng", "nav.contact": "Liên hệ",
-    "hero.eyebrow": "TP. Hồ Chí Minh, Việt Nam",
-    "hero.status": "$ đang học — Spring Boot & System Design",
-    "hero.tagline": "AI/ML Engineer × Backend Engineer — kết nối nghiên cứu và sản xuất.",
-    "hero.sub": "Có công bố về Transformers cho dịch ngôn ngữ ký hiệu Việt Nam. Đã ship Agentic AI production ở SCC Vietnam. Giờ đang xây nền tảng đa nhà cung cấp Java/Spring Boot — định vị Backend + AI hybrid, khác biệt.",
-    "hero.ctaProjects": "Xem dự án", "hero.ctaResearch": "Đọc nghiên cứu",
-    "hero.splitResearch": "Paper · SLT · Transformers",
-    "hero.splitDev": "Spring · RAG · Agentic AI",
-    "about.title": "Giới thiệu",
-    "about.researcherTitle": "Phía nghiên cứu",
-    "about.researcherBody": "Kỹ sư Máy tính tại VNU HCM (GPA 3.2). Khóa luận và công bố về Transformers cho dịch ngôn ngữ ký hiệu Việt Nam — retrain SLRT, ALLSVD, ASLLVD và semantic-segmentation. Đề cao tính chặt chẽ: ablation, tái lập, đánh giá trung thực.",
-    "about.engineerTitle": "Phía kỹ sư",
-    "about.engineerBody": "Đã ship Agentic AI + RAG production ở SCC Vietnam (FastAPI, LangGraph, Azure AI Search) và chatbot fullstack ở Grab. Giờ bổ sung chiều sâu backend — Java, Spring Boot, Postgres, Redis, Stripe — học qua nền tảng thật, không phải tutorial.",
-    "research.title": "Nghiên cứu & Công bố",
-    "projects.title": "Dự án tiêu biểu",
-    "projects.sub": "Cân bằng giữa kỹ thuật production và nghiên cứu. Cover bằng CSS — screenshot thật thêm sau.",
-    "projects.filterAll": "Tất cả", "projects.filterDev": "Kỹ thuật", "projects.filterResearch": "Nghiên cứu",
-    "learning.title": "Đang học",
-    "learning.sub": "Lộ trình Engineer Pro — tự học, map 1:1 vào dự án Spring Boot thật. Trung thực về việc còn đầu-stack Java.",
-    "skills.title": "Kỹ năng",
-    "contact.title": "Liên hệ",
-    "contact.lead": "Sẵn sàng cho vị trí AI/ML và backend. Hợp tác nghiên cứu luôn chào đón.",
-    "footer.built": "Tự viết — HTML, CSS, JS thuần. Không framework.",
-    "footer.status": "exit 0",
-  }
-};
 
 /* ----- Experience timeline ----- */
 const TIMELINE = [
@@ -266,26 +207,10 @@ function renderSkills() {
 }
 
 /* ============================================================
- *  i18n + theme
+ *  Palette toggle (blaugrana ↔ terminal) — square swatch button
  * ============================================================ */
-let lang = "en";
-function applyLang() {
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(node => {
-    const key = node.getAttribute("data-i18n");
-    const text = I18N[lang][key];
-    if (text) node.textContent = text;
-  });
-  document.getElementById("langBtn").textContent = lang === "en" ? "EN" : "VI";
-}
-document.getElementById("langBtn").addEventListener("click", () => { lang = lang === "en" ? "vi" : "en"; applyLang(); });
-
-/* 2 palettes: blaugrana (Barca blue+garnet) ↔ terminal (#2D2D2B + green/amber) */
-const PALETTES = ["blaugrana", "terminal"];
-const PALETTE_LABEL = { blaugrana: "blaugrana", terminal: "terminal" };
 function applyPalette(name) {
   document.documentElement.setAttribute("data-theme", name);
-  document.getElementById("themeLabel").textContent = PALETTE_LABEL[name];
 }
 document.getElementById("themeBtn").addEventListener("click", () => {
   const cur = document.documentElement.getAttribute("data-theme") || "blaugrana";
@@ -321,5 +246,4 @@ renderResearch();
 renderProjects();
 renderLearning();
 renderSkills();
-applyLang();
 observeReveal();

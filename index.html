@@ -15,21 +15,19 @@
   <header class="nav" id="nav">
     <a class="nav__brand" href="#top">
       <span class="nav__mark">NPH</span>
-      <span class="nav__name" data-i18n="brand">Hien Nguyen</span>
+      <span class="nav__name">Hien Nguyen</span>
     </a>
     <nav class="nav__links">
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#research" data-i18n="nav.research">Research</a>
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#learning" data-i18n="nav.learning">Learning</a>
-      <a href="#skills" data-i18n="nav.skills">Skills</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#learning">Learning</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="nav__tools">
-      <button class="icon-btn" id="langBtn" title="Switch language">EN</button>
-      <button class="icon-btn icon-btn--palette" id="themeBtn" title="Switch color palette" aria-label="Switch color palette">
-        <span class="swatch" id="themeSwatch"></span>
-        <span id="themeLabel">blaugrana</span>
+      <button class="swatch-btn" id="themeBtn" title="Switch color palette" aria-label="Switch color palette">
+        <span class="swatch"></span>
       </button>
       <a class="btn btn--ghost btn--sm" href="https://github.com/FrorsttzNguyen" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
@@ -44,22 +42,22 @@
             <span>NPH</span>
           </div>
           <div>
-            <p class="hero__eyebrow"><span class="dot dot--live"></span><span data-i18n="hero.eyebrow">Ho Chi Minh City, Vietnam</span></p>
-            <p class="hero__status" data-i18n="hero.status">$ currently learning — Spring Boot & System Design</p>
+            <p class="hero__eyebrow"><span class="dot dot--live"></span><span>Ho Chi Minh City, Vietnam</span></p>
+            <p class="hero__status">$ currently learning — Spring Boot & System Design</p>
           </div>
         </div>
         <h1 class="hero__title">Nguyen Phuong Nhat Hien</h1>
-        <p class="hero__tagline" data-i18n="hero.tagline">
+        <p class="hero__tagline">
           AI/ML Engineer × Backend Engineer — bridging research and production.
         </p>
-        <p class="hero__sub" data-i18n="hero.sub">
+        <p class="hero__sub">
           Published research on Transformers for Vietnamese Sign Language Translation.
           Production Agentic AI at SCC Vietnam. Now engineering a Java/Spring Boot
           multi-vendor platform — a deliberate, differentiating <b>Backend + AI hybrid</b> profile.
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects" data-i18n="hero.ctaProjects">See projects</a>
-          <a class="btn btn--ghost" href="#research" data-i18n="hero.ctaResearch">Read research</a>
+          <a class="btn btn--primary" href="#projects">See projects</a>
+          <a class="btn btn--ghost" href="#research">Read research</a>
         </div>
         <div class="hero__chips">
           <span>Python</span><span>Java · Spring Boot</span><span>FastAPI</span>
@@ -69,12 +67,12 @@
       <div class="hero__split" aria-hidden="true">
         <div class="split__col split__col--research">
           <span class="split__label">Researcher</span>
-          <span class="split__desc" data-i18n="hero.splitResearch">Papers · SLT · Transformers</span>
+          <span class="split__desc">Papers · SLT · Transformers</span>
         </div>
         <div class="split__divider"></div>
         <div class="split__col split__col--dev">
           <span class="split__label">Engineer</span>
-          <span class="split__desc" data-i18n="hero.splitDev">Spring · RAG · Agentic AI</span>
+          <span class="split__desc">Spring · RAG · Agentic AI</span>
         </div>
       </div>
     </section>
@@ -83,16 +81,16 @@
     <section id="about" class="section">
       <header class="section__head">
         <span class="section__num">&gt; 01</span>
-        <h2 data-i18n="about.title">About</h2>
+        <h2>About</h2>
       </header>
       <div class="about__grid">
         <div class="about__card about__card--research">
-          <h3 data-i18n="about.researcherTitle">Researcher side</h3>
-          <p data-i18n="about.researcherBody">B.Eng. Computer Engineering at VNU HCM (GPA 3.2). Thesis and publication on Transformers for Vietnamese Sign Language Translation — retraining SLRT, ALLSVD, ASLLVD and semantic-segmentation conditioning. I care about rigor: ablations, reproducibility, honest evaluation.</p>
+          <h3>Researcher side</h3>
+          <p>B.Eng. Computer Engineering at VNU HCM (GPA 3.2). Thesis and publication on Transformers for Vietnamese Sign Language Translation — retraining SLRT, ALLSVD, ASLLVD and semantic-segmentation conditioning. I care about rigor: ablations, reproducibility, honest evaluation.</p>
         </div>
         <div class="about__card about__card--dev">
-          <h3 data-i18n="about.engineerTitle">Engineer side</h3>
-          <p data-i18n="about.engineerBody">Shipped production Agentic AI + RAG at SCC Vietnam (FastAPI, LangGraph, Azure AI Search) and fullstack chatbot features at Grab. Now adding deep backend depth — Java, Spring Boot, Postgres, Redis, Stripe — learned through a real multi-vendor platform, not toy tutorials.</p>
+          <h3>Engineer side</h3>
+          <p>Shipped production Agentic AI + RAG at SCC Vietnam (FastAPI, LangGraph, Azure AI Search) and fullstack chatbot features at Grab. Now adding deep backend depth — Java, Spring Boot, Postgres, Redis, Stripe — learned through a real multi-vendor platform, not toy tutorials.</p>
         </div>
       </div>
       <div class="timeline" id="timeline"><!-- injected --></div>
@@ -102,7 +100,7 @@
     <section id="research" class="section section--alt">
       <header class="section__head">
         <span class="section__num">&gt; 02</span>
-        <h2 data-i18n="research.title">Research &amp; Publications</h2>
+        <h2>Research &amp; Publications</h2>
       </header>
       <div class="research__grid" id="researchGrid"><!-- injected --></div>
     </section>
@@ -111,13 +109,13 @@
     <section id="projects" class="section">
       <header class="section__head">
         <span class="section__num">&gt; 03</span>
-        <h2 data-i18n="projects.title">Selected Projects</h2>
-        <p class="section__sub" data-i18n="projects.sub">Production engineering and research, balanced. Covers are CSS-generated — real screenshots slot in later.</p>
+        <h2>Selected Projects</h2>
+        <p class="section__sub">Production engineering and research, balanced. Covers are CSS-generated — real screenshots slot in later.</p>
       </header>
       <div class="filters" id="filters">
-        <button class="filter is-active" data-filter="all" data-i18n="projects.filterAll">All</button>
-        <button class="filter" data-filter="dev" data-i18n="projects.filterDev">Engineering</button>
-        <button class="filter" data-filter="research" data-i18n="projects.filterResearch">Research</button>
+        <button class="filter is-active" data-filter="all">All</button>
+        <button class="filter" data-filter="dev">Engineering</button>
+        <button class="filter" data-filter="research">Research</button>
       </div>
       <div class="projects__grid" id="projectsGrid"><!-- injected --></div>
     </section>
@@ -126,8 +124,8 @@
     <section id="learning" class="section section--alt">
       <header class="section__head">
         <span class="section__num">&gt; 04</span>
-        <h2 data-i18n="learning.title">Currently Learning</h2>
-        <p class="section__sub" data-i18n="learning.sub">Engineer Pro track — self-study, mapped 1:1 to a real Spring Boot project. Honest about being early in Java.</p>
+        <h2>Currently Learning</h2>
+        <p class="section__sub">Engineer Pro track — self-study, mapped 1:1 to a real Spring Boot project. Honest about being early in Java.</p>
       </header>
       <div class="learning__track" id="learningTrack"><!-- injected --></div>
     </section>
@@ -136,7 +134,7 @@
     <section id="skills" class="section">
       <header class="section__head">
         <span class="section__num">&gt; 05</span>
-        <h2 data-i18n="skills.title">Skills</h2>
+        <h2>Skills</h2>
       </header>
       <div class="skills__grid" id="skillsGrid"><!-- injected --></div>
     </section>
@@ -145,10 +143,10 @@
     <section id="contact" class="section section--alt">
       <header class="section__head">
         <span class="section__num">&gt; 06</span>
-        <h2 data-i18n="contact.title">Contact</h2>
+        <h2>Contact</h2>
       </header>
       <div class="contact">
-        <p class="contact__lead" data-i18n="contact.lead">Open to AI/ML and backend engineering roles. Research collaborations welcome.</p>
+        <p class="contact__lead">Open to AI/ML and backend engineering roles. Research collaborations welcome.</p>
         <div class="contact__links">
           <a class="contact__link" href="mailto:fangrixian.nguyenn@outlook.com"><span>✉</span> fangrixian.nguyenn@outlook.com</a>
           <a class="contact__link" href="https://github.com/FrorsttzNguyen" target="_blank" rel="noopener"><span>⌥</span> github.com/FrorsttzNguyen</a>
@@ -159,8 +157,8 @@
   </main>
 
   <footer class="footer">
-    <span data-i18n="footer.built">Built by hand — HTML, CSS, vanilla JS. No framework.</span>
-    <span class="footer__mono">© <span id="year"></span> · NPH · <span data-i18n="footer.status">exit 0</span></span>
+    <span>Built by hand — HTML, CSS, vanilla JS. No framework.</span>
+    <span class="footer__mono">© <span id="year"></span> · NPH · <span>exit 0</span></span>
   </footer>
 
   <script src="script.js"></script>
