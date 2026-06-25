@@ -86,16 +86,6 @@ const PROJECTS = [
   },
 ];
 
-/* ----- Learning track (Engineer Pro) ----- */
-const LEARNING = [
-  { n: "01", status: "active", name: "Intro — Python, Java", tag: "now", map: "Java syntax → read project code" },
-  { n: "02", status: "todo", name: "OOP + Database Design", map: "domain value objects · Flyway schema" },
-  { n: "03", status: "todo", name: "DSA Level 1", map: "algorithmic thinking" },
-  { n: "04", status: "todo", name: "Backend Java with Spring", tag: "1:1", map: "layered arch · REST · JPA · Security" },
-  { n: "05", status: "todo", name: "DSA Level 2", map: "Big-Tech interview prep" },
-  { n: "06", status: "todo", name: "System Design — Big Tech", map: "Redis cache · rate-limit · DB scaling" },
-  { n: "07", status: "todo", name: "System Design — Level 2", map: "distributed systems, advanced" },
-];
 
 /* ----- Skills (tiered) ----- */
 const SKILLS = [
@@ -179,20 +169,6 @@ function renderProjects(filter = "all") {
   observeReveal();
 }
 
-function renderLearning() {
-  const root = document.getElementById("learningTrack");
-  LEARNING.forEach(l => {
-    const item = el("div", "lr-item reveal");
-    item.append(
-      el("span","lr-idx", l.n),
-      el("span", `lr-status lr-status--${l.status}`),
-      (() => { const name = el("div","lr-name", l.name + (l.tag ? ` <span class="lr-tag">${l.tag}</span>` : "")); return name; })(),
-      el("div","lr-map", l.map),
-    );
-    root.appendChild(item);
-  });
-}
-
 function renderSkills() {
   const root = document.getElementById("skillsGrid");
   SKILLS.forEach(s => {
@@ -244,6 +220,5 @@ document.getElementById("year").textContent = "2026";
 renderTimeline();
 renderResearch();
 renderProjects();
-renderLearning();
 renderSkills();
 observeReveal();
